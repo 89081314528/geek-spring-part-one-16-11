@@ -1,4 +1,8 @@
-package ru.geekbrains.persist;
+package ru.geekbrains.repository;
+
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
+import ru.geekbrains.entity.Product;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,6 +10,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
+@Repository
 public class ProductRepositoryImpl implements ProductRepository {
 
     private final Map<Long, Product> productMap = new ConcurrentHashMap<>();
@@ -18,7 +23,7 @@ public class ProductRepositoryImpl implements ProductRepository {
     }
 
     @Override
-    public Product findById(long id) {
+    public Product findById(Long id) {
         return productMap.get(id);
     }
 
@@ -32,7 +37,7 @@ public class ProductRepositoryImpl implements ProductRepository {
     }
 
     @Override
-    public void delete(long id) {
+    public void delete(Long id) {
         productMap.remove(id);
     }
 }

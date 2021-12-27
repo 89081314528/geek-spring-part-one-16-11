@@ -1,8 +1,8 @@
 package ru.geekbrains;
 
-import ru.geekbrains.persist.Product;
-import ru.geekbrains.persist.ProductRepository;
-import ru.geekbrains.persist.ProductRepositoryImpl;
+import ru.geekbrains.repository.Product;
+import ru.geekbrains.repository.ProductRepository;
+import ru.geekbrains.repository.ProductRepositoryImpl;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;

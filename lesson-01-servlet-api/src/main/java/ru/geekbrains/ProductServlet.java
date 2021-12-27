@@ -1,7 +1,7 @@
 package ru.geekbrains;
 
-import ru.geekbrains.persist.Product;
-import ru.geekbrains.persist.ProductRepository;
+import ru.geekbrains.repository.Product;
+import ru.geekbrains.repository.ProductRepository;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

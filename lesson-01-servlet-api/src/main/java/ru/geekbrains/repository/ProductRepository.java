@@ -1,4 +1,4 @@
-package ru.geekbrains.persist;
+package ru.geekbrains.repository;
 
 import java.util.List;
 
