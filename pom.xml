@@ -20,6 +20,7 @@
         <module>lesson-03-spring-mvc</module>
         <module>lesson-04-spring-boot</module>
         <module>lesson-05-1-hibernate</module>
+        <module>lesson-07-spring-data</module>
 
     </modules>
 
