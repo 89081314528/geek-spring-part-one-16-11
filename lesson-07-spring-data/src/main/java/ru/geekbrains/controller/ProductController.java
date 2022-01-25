@@ -55,7 +55,7 @@ public class ProductController {
     }
 
     @GetMapping("/delete/{id}")
-    public String delete(@PathVariable("id") UUID id, Model model) {
+    public String delete(@PathVariable("id") UUID id) {
         productRepository.deleteById(id);
         return "redirect:/product";
     }
