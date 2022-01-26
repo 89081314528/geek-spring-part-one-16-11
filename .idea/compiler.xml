@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -13,7 +14,13 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="lesson-02-spring_basic" target="11" />
+      <module name="geek-spring-part-one-16-11" target="11" />
+      <module name="lesson-01-servlet-api" target="11" />
+      <module name="lesson-02-spring-basics" target="11" />
+      <module name="lesson-03-spring-mvc" target="11" />
+      <module name="lesson-04-spring-boot" target="11" />
+      <module name="lesson-05-1-hibernate" target="11" />
+      <module name="lesson-05-hibernate" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
