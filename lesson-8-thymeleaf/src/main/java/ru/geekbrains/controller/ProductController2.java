@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import ru.geekbrains.persist.CategoryRepository;
+import ru.geekbrains.persist.ParamsForPagination;
 import ru.geekbrains.service.ProductService;
 import ru.geekbrains.service.dto.ProductDto;
 
@@ -40,6 +41,22 @@ public class ProductController2 {
                            @RequestParam("sort") Optional<String> sort) {
         logger.info("Product filter with name pattern {}", nameFilter.orElse(null));
 
+        ParamsForPagination paramsForPagination = new ParamsForPagination();
+        if (sort.isEmpty() || sort.orElseThrow().isBlank()) {
+            paramsForPagination.setSort("id");
+        } else {
+            paramsForPagination.setSort(sort.orElseThrow());
+        }
+
+        if (nameFilter.isEmpty() || nameFilter.orElseThrow().isBlank()) {
+            paramsForPagination.setNameFilter("");
+        } else {
+            paramsForPagination.setNameFilter(nameFilter.orElseThrow());
+        }
+
+        paramsForPagination.setSize(size.orElse(5).toString());
+        paramsForPagination.setPage(page.orElse(1));
+        model.addAttribute("pagParams", paramsForPagination);
         model.addAttribute("products", productService.findAll(
                 nameFilter,
                 page.orElse(1) - 1,

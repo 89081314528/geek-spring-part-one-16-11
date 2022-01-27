@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 import java.math.BigDecimal;
 import java.util.List;
 
-public interface ProductRepository extends JpaRepository<Product, Long>, JpaSpecificationExecutor<Product> {
+public interface ProductRepository2 extends JpaRepository<Product, Long>, JpaSpecificationExecutor<Product> {
 
     List<Product> findAllByNameLike(String pattern);
 

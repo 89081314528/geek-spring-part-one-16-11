@@ -14,14 +14,14 @@ import java.util.Optional;
 @Service
 public class ProductServiceImpl implements ProductService {
 
-    private final ProductRepository productRepository;
+    private final ProductRepository2 productRepository2;
 
     private final CategoryRepository categoryRepository;
 
     @Autowired
-    public ProductServiceImpl(ProductRepository productRepository,
+    public ProductServiceImpl(ProductRepository2 productRepository2,
                               CategoryRepository categoryRepository) {
-        this.productRepository = productRepository;
+        this.productRepository2 = productRepository2;
         this.categoryRepository = categoryRepository;
     }
 
@@ -32,13 +32,13 @@ public class ProductServiceImpl implements ProductService {
         if (nameFilter.isPresent() && !nameFilter.get().isBlank()) {
             spec.and(ProductSpecification.nameLike(nameFilter.get()));
         }
-        return productRepository.findAll(spec, PageRequest.of(page, size, Sort.by(sort)))
+        return productRepository2.findAll(spec, PageRequest.of(page, size, Sort.by(sort)))
                 .map(ProductServiceImpl::convertToDto);
     }
 
     @Override
     public Optional<ProductDto> findById(Long id) {
-        return productRepository.findById(id)
+        return productRepository2.findById(id)
                 .map(ProductServiceImpl::convertToDto);
     }
 
@@ -51,13 +51,13 @@ public class ProductServiceImpl implements ProductService {
                 productDto.getName(),
                 productDto.getDescription(),
                 productDto.getPrice(), category);
-        Product saved = productRepository.save(product);
+        Product saved = productRepository2.save(product);
         return convertToDto(saved);
     }
 
     @Override
     public void deleteById(Long id) {
-        productRepository.deleteById(id);
+        productRepository2.deleteById(id);
     }
 
     private static ProductDto convertToDto(Product prod) {

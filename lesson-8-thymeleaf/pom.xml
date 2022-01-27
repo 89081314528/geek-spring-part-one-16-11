@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ru.geekbrains</groupId>
-    <artifactId>lesson-04-spring-boot</artifactId>
+    <artifactId>lesson-08-thymeleaf</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>lesson-04-spring-boot</name>
-    <description>lesson-04-spring-boot</description>
+    <name>lesson-08-thymeleaf</name>
+    <description>lesson-08-thymeleaf</description>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -35,8 +35,10 @@
         </dependency>
 
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.5</version>
+<!--            <scope>runtime</scope>-->
         </dependency>
 
         <dependency>

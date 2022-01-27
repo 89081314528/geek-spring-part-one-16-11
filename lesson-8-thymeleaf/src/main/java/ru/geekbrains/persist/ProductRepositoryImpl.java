@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 //@Repository
-//public class ProductRepositoryImpl implements ProductRepository {
+//public class ProductRepositoryImpl implements ProductRepository2 {
 //
 //    @PersistenceContext
 //    private EntityManager em;
