@@ -2,5 +2,8 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/lesson-04-spring-boot/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson-07-spring-data/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson-8-thymeleaf/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson-9-1-spring-rest/src/main/java" charset="UTF-8" />
   </component>
 </project>
