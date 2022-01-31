@@ -5,6 +5,9 @@ import org.springframework.web.bind.annotation.*;
 import ru.geekbrains.persist.Category;
 import ru.geekbrains.service.CategoryService;
 
+import java.util.Collection;
+import java.util.List;
+
 @RestController
 @RequestMapping("rest/category")
 public class CategoryResource {
@@ -27,6 +30,11 @@ public class CategoryResource {
             return ResponseEntity.notFound() .build();
         }
         return ResponseEntity.ok(category);
+    }
+
+    @GetMapping
+    public ResponseEntity<Collection<Category>> getAllFaculties() {
+        return ResponseEntity.ok(categoryService.getAllCategories());
     }
 
     @PutMapping

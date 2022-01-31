@@ -6,6 +6,8 @@ import ru.geekbrains.persist.Category;
 import ru.geekbrains.persist.CategoryRepository;
 
 import javax.xml.catalog.Catalog;
+import java.util.Collection;
+import java.util.List;
 
 @Service
 public class CategoryServiceImpl implements CategoryService{
@@ -30,6 +32,11 @@ public class CategoryServiceImpl implements CategoryService{
 
     public void deleteCategory (Long id) {
         categoryRepository.deleteById(id);
+    }
+
+    @Override
+    public Collection<Category> getAllCategories() {
+        return categoryRepository.findAll();
     }
 
 }
