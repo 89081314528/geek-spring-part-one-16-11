@@ -20,6 +20,7 @@
         <module>lesson-03-spring-mvc</module>
         <module>lesson-04-spring-boot</module>
         <module>lesson-05-1-hibernate</module>
+        <module>lesson-8-thymeleaf</module>
         <module>lesson-06-hibernate</module>
         <module>lesson-07-spring-data</module>
         <module>lesson-9-1-spring-rest</module>
