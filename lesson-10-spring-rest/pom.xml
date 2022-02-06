@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ru.geekbrains</groupId>
-    <artifactId>lesson-9-1-spring-rest</artifactId>
+    <artifactId>lesson-10-spring-rest</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>lesson-9-1-spring-rest</name>
-    <description>lesson-9-1-spring-rest</description>
+    <name>lesson-10-spring-rest</name>
+    <description>lesson-10-spring-rest</description>
     <properties>
         <java.version>11</java.version>
     </properties>
